@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>update form</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+    form{
+        margin-left: 200px;
+        margin-right: 400px;
+    }
+    h2{
+        color: white;
+    }
+    body{
+        background-color:mediumslateblue;
+    }
+    a{
+        color: whitesmoke;
+        font-size: 20px;
+        margin-left: 350px;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="row2">
+        <div class=offset-md-3 col-md-3">
+        <form method="post">
+        {% csrf_token %}
+        <h2>Update your details here</h2>
+            {{ uform }}<br>
+            <center>
+        <input type="submit" value="update" class="btn btn-success">
+        <input type="reser" value="clear" class="btn btn-danger"></center>
+            </form>
+        <a href="/#/">go to home</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

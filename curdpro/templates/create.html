@@ -1,0 +1,42 @@
+
+<html>
+<head>
+    <title>create form</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body{
+        background-color: cyan;
+    }
+    .container{
+        margin-left: 250px;
+    }
+    #aa{
+        margin-left: 100px;
+    }
+    h2{
+        color: mediumpurple;
+    }
+</style>
+<div class="container">
+    <div class="row2">
+        <div class="offset-md-3 col-md-6">
+            <form method="post">
+                <h2>Enter your details</h2>
+                {% csrf_token %}
+                {{ cform }}<br>
+                <div id="aa">
+                <input type="submit" value="submit" class="btn btn-success">
+                <input type="reset" value="clear" class="btn btn-danger">
+                    </div>
+
+            </form>
+            <center><a href="/#/">go to home</a> </center>
+        </div>
+    </div>
+</div>
+</html>
